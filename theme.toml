@@ -3,16 +3,16 @@
 
 name = "Mohdsaed Dark"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
+licenselink = "https://github.com/moeabdol/mohdsaed-dard/blob/main/LICENSE"
+description = "Hugo dark theme"
+homepage = "https://mohdsaed.me"
+tags = ["hugo", "theme", "dark"]
 features = []
 min_version = "0.112.3"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Mohammed Saed"
+  homepage = "https://mohdsaed.me"
 
 # If porting an existing theme
 [original]
