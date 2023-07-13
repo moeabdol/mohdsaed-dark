@@ -27,4 +27,9 @@
 	<main>
 		{{ .Content }}
 	</main>
+
+	<div class="comments">
+		<h2 class="title">Comments</h2>
+		{{ template "_internal/disqus.html" . }}
+	</div>
 {{ end }}
