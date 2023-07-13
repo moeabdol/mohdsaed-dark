@@ -1,0 +1,46 @@
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background-color: $light-black;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	height: 60px;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.navbar a {
+	color: $grey;
+	text-decoration: none;
+}
+
+.navbar a.logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.navbar a.logo img {
+	height: 40px;
+	aspect-ratio: 1;
+	margin-right: 8px;
+}
+
+.navbar a.logo span {
+	font-family: 'Teko';
+	font-size: 2.4rem;
+	font-weight: 500;
+}
+
+.navbar a.nav-item {
+	margin-left: 50px;
+	font-family: 'Teko';
+	font-size: 1.7rem;
+	font-weight: 400;
+}

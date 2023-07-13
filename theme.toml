@@ -3,19 +3,11 @@
 
 name = "Mohdsaed Dark"
 license = "MIT"
-licenselink = "https://github.com/moeabdol/mohdsaed-dard/blob/main/LICENSE"
+licenselink = "https://github.com/moeabdol/mohdsaed-dark/blob/main/LICENSE"
 description = "Hugo dark theme"
 homepage = "https://mohdsaed.me"
 tags = ["hugo", "theme", "dark"]
-features = []
-min_version = "0.112.3"
 
 [author]
   name = "Mohammed Saed"
   homepage = "https://mohdsaed.me"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""

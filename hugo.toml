@@ -1,1 +1,2 @@
-# Theme config.
+[params]
+	googleAnalytics = "G-XXXXXXXXXX"
