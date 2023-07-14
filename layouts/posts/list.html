@@ -1,8 +1,33 @@
 {{ define "main" }}
-	<h1 class="title">{{ .Title }}</h1>
-	<h2 class="subtitle">{{ .Page.Params.subtitle }}</h2>
-
 	<main class="posts-list">
-		{{ .Content }}
+		<h1 class="title">{{ .Title }}</h1>
+		{{ if .Page.Params.subtitle }}
+			<h2 class="subtitle">{{ .Page.Params.subtitle }}</h2>
+		{{ end }}
+
+		<section class="content">
+			{{ .Content }}
+
+			<div class="posts">
+				{{ range .Pages  }}
+						<div class="post-card">
+							<div class="title-row">
+								<a href="{{ .RelPermalink }}">
+									<div class="title">{{ .Title }}</div>
+								</a>
+								<span class="date">{{ .Date.Format "Jan , 2006" }}</span>
+							</div>
+							<div class="summary">
+								<div class="fade">
+									{{ .Summary }}
+								</div>
+								<div>
+									<a href="{{ .RelPermalink }}">Read more...</a>
+								</div>
+							</div>
+						</div>
+				{{ end }}
+			</div>
+		</section>
 	</main>
 {{ end }}

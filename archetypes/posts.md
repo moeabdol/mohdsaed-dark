@@ -4,6 +4,7 @@ subtitle: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
 draft: false
 description: This is the description of the {{ replace .Name "-" " " | title }} post
+summary: {{ replace .Name "-" " " | title }}
 categories:
 - category1
 - category2

@@ -5,6 +5,16 @@
 			<h2 class="subtitle">{{ .Page.Params.subtitle }}</h2>
 		{{ end }}
 
+		<div class="taxonomy">
+			{{ range $category := .Params.Categories }}
+				<span class="category">{{ $category }}</span>
+			{{ end }}
+
+			{{ range $tag := .Params.Tags }}
+				<span class="tag">{{ $tag }}</span>
+			{{ end }}
+		</div>
+
 		<div class="post-meta">
 			<div class="author-name">
 				<span>Author:</span>
