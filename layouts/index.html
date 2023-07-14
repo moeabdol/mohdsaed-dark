@@ -1,6 +1,11 @@
 {{ define "main" }}
 	<div class="hero-container">
-		<img src="/images/mohdsaed.png" alt="Mohammed Saed" class="hero-image">
+		{{ $image := resources.Get "images/mohdsaed.png" }}
+		{{ $resized := $image.Resize "200x" }}
+		{{ with $resized }}
+			<img src="{{ .RelPermalink }}" alt="Mohammed Saed" class="hero-image" width="{{ .Width }}" height="{{ .Height }}">
+		{{ end }}
+
 		<div class="hero-text">
 			<h1 class="hero-title">Hello, World!</h1>
 			<p class="hero-subtitle">My name is Mohammed, and I'm a Computer Scientist.
