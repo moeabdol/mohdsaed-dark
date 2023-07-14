@@ -1,28 +1,9 @@
 {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
 {{ $smallImage := $image.Resize "1024x" }}
 {{ $caption := .Get "caption" }}
-{{ $imageAbsUrl := $image | absURL }}
-
-{{ $authorUrl := .Get "authorUrl" }}
-
-{{ $license := .Site.Params.copyrightUrl | absURL }}
-{{ if .Get "license" }}
-	{{ $license = .Get "license" }}
-{{ end }}
-
 {{ $credit := print "© " .Site.Params.author ", " (.Page.Date.Format "2006") }}
 {{ if .Get "credit" }}
 	{{ $credit = .Get "credit" }}
-{{ end }}
-
-{{ $author := .Site.Params.author }}
-{{ if .Get "author" }}
-	{{ $author = .Get "author" }}
-{{ end }}
-
-{{ $creatorType := "Person" }}
-{{ if .Get "creatorType" }}
-	{{ $creatorType = .Get "creatorType" }}
 {{ end }}
 
 <figure class="cover-image">
@@ -41,27 +22,7 @@
 			{{ $caption }}
 		</div>
 		<div class="credit">
-			{{ if $authorUrl }}
-				<a class="author-url" href="{{ $authorUrl }}" target="_blank">{{ $credit }}</a>
-			{{ else }}
-				{{ $credit }}
-			{{ end }}
+			{{ $credit }}
 		</div>
 	</figcaption>
 </figure>
-
-<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "ImageObject",
-		"contentUrl": {{ $imageAbsUrl }},
-		"license": {{ $license }},
-		"acquireLicensePage": {{ $license }},
-		"creditText": {{ $credit }},
-		"creator": {
-			"@type": {{ $creatorType }},
-			"name": {{ $author }},
-		},
-		"copyrightNotice": {{ $author }}
-	}
-</script>
