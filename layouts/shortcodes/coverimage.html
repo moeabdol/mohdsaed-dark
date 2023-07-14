@@ -55,12 +55,12 @@
 		"@context": "https://schema.org",
 		"@type": "ImageObject",
 		"contentUrl": {{ $imageAbsUrl }},
-		"license": {{ $license }}
+		"license": {{ $license }},
 		"acquireLicensePage": {{ $license }},
 		"creditText": {{ $credit }},
 		"creator": {
-			"@type": {{ $creatorType }}
-			"name": {{ $author }}
+			"@type": {{ $creatorType }},
+			"name": {{ $author }},
 		},
 		"copyrightNotice": {{ $author }}
 	}
