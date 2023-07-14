@@ -49,6 +49,10 @@ main.post {
 		align-items: flex-start;
 		margin: 10px 0 0 0;
 
+		span {
+			line-height: 1.4;
+		}
+
 		.author-name,
 		.publish-date,
 		.modify-date,
@@ -90,8 +94,20 @@ main.post {
 			}
 
 			figcaption {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				width: 100%;
 				margin-top: 5px;
 				font-size: 0.8rem;
+
+				.author-url {
+					color: $grey;
+					border: none;
+					text-decoration: underline;
+				}
 			}
 		}
 
