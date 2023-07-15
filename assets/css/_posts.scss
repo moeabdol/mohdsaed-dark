@@ -164,6 +164,34 @@ main.post {
 			line-height: 1.6;
 			margin: 20px 0;
 		}
+
+		aside {
+			margin: 10px 0 20px 0;
+			font-family: 'Teko';
+
+			.title {
+				font-size: 1.8rem;
+				font-weight: 500;
+			}
+
+			nav#TableOfContents {
+				font-size: 1.6rem;
+				font-weight: 300;
+
+				ul {
+					padding: 0 0 0 25px;
+					margin: 0;
+
+					li {
+						line-height: 30px;
+
+						a {
+							color: $grey;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
