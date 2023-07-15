@@ -1,12 +1,16 @@
 {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
-{{ $smallImage := $image.Resize "1024x" }}
+{{ $smallImage := $image.Resize "300x" }}
 {{ $caption := .Get "caption" }}
 {{ $credit := print "© " .Site.Params.author ", " (.Page.Date.Format "2006") }}
 {{ if .Get "credit" }}
 	{{ $credit = .Get "credit" }}
 {{ end }}
+{{ $float := "right" }}
+{{ if .Get "float" }}
+	{{ $float = .Get "float" }}
+{{ end }}
 
-<figure class="cover-image">
+<figure class="post-image {{ $float }}">
 	<a href="{{ $image.RelPermalink }}">
 		{{ with $smallImage }}
 			<img
