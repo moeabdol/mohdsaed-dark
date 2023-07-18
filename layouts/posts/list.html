@@ -17,6 +17,17 @@
 								</a>
 								<span class="date">{{ .Date.Format "Jan , 2006" }}</span>
 							</div>
+
+							<div class="taxonomy">
+								{{ range $category := .Params.Categories }}
+									<span class="category">{{ $category }}</span>
+								{{ end }}
+
+								{{ range $tag := .Params.Tags }}
+									<span class="tag">{{ $tag }}</span>
+								{{ end }}
+							</div>
+
 							<div class="summary">
 								<div class="fade">
 									{{ .Summary }}
