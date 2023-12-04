@@ -8,7 +8,7 @@ summary: {{ replace .Name "-" " " | title }}
 cover: "images/cover.jpg"
 cover_alt: {{ replace .Name "-" " " | title }}
 cover_caption: {{ replace .Name "-" " " | title }}
-cover_credit: {{ print "© " .Site.Params.author ", 2023" }}
+cover_credit: {{ print "© " .Site.Params.authorName ", 2023" }}
 categories:
 - category1
 - category2

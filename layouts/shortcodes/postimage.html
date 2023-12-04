@@ -1,7 +1,7 @@
 {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
 {{ $smallImage := $image.Resize "300x" }}
 {{ $caption := .Get "caption" }}
-{{ $credit := print "© " .Site.Params.author }}
+{{ $credit := print "© " .Site.Params.authorName }}
 {{ if .Get "credit" }}
 	{{ $credit = .Get "credit" }}
 {{ end }}
