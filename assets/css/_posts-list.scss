@@ -3,7 +3,10 @@ main.posts-list {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin: 15px 0 0 0;
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	background-color: $dark-grey;
 
 	h1.title {
 		font-size: 2.5rem;
